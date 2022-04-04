@@ -1,4 +1,3 @@
-// const { removeContact } = require("../../models/contacts.js");
 const { Contact } = require("../../models");
 
 module.exports = async (req, res, next) => {
@@ -14,5 +13,6 @@ module.exports = async (req, res, next) => {
     });
     return;
   }
-  res.status(200).json({ status: "success", message: "contact is deleted" });
+
+  res.status(200).json({ status: "success", message: "Contact is deleted" });
 };
