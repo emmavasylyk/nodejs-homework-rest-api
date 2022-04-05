@@ -10,11 +10,14 @@ const {
 } = require("../../controllers/contacts");
 
 const router = express.Router();
-router.get("/", getContacts);
-router.get("/:contactId", getContactById);
-router.post("/", postContact);
-router.delete("/:contactId", deleteContact);
-router.put("/:contactId", putContact);
+
+router.get("/", getContacts).post("/", postContact);
+
+router
+  .get("/:contactId", getContactById)
+  .delete("/:contactId", deleteContact)
+  .put("/:contactId", putContact);
+
 router.patch("/:contactId/favorite", patchFavoriteContact);
 
 module.exports = router;

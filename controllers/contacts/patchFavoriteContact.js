@@ -8,6 +8,9 @@ module.exports = async (req, res, next) => {
   }
 
   const { favorite } = req.body;
+
+  console.log("favorite: ", favorite);
+
   const id = req.params.contactId;
   const validationResult = favoriteValidation(req.body);
   if (validationResult.error) {
