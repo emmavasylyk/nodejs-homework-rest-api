@@ -1,14 +1,6 @@
 const express = require("express");
 
-const {
-  contacts: ctrl,
-  // getContacts,
-  // getContactById,
-  // postContact,
-  // deleteContact,
-  // putContact,
-  // patchFavoriteContact,
-} = require("../../controllers");
+const { contacts: ctrl } = require("../../controllers");
 
 const { auth, ctrlWrapper } = require("../../middlewares");
 
